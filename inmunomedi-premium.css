@@ -1,0 +1,483 @@
+/* InmunoMedi Premium Styles - Diseño profesional y científico */
+
+/* Updated Color Palette */
+:root {
+  --primary-color: #056afa;
+  --secondary-color: #417ecd;
+  --accent-color: #ffcffa;
+  --light-accent: #d3b2c2;
+  --highlight-color: #ff2df;
+  --text-color: #333333;
+  --text-light: #666666;
+  --text-lighter: rgba(255, 255, 255, 0.8);
+  --bg-color: #f8f9fa;
+  --bg-alt: #e9f0f8;
+  --white: #ffffff;
+  --border-color: rgba(5, 106, 250, 0.1);
+}
+
+/* Estilos base y fondo premium */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, var(--bg-color) 0%, var(--bg-alt) 100%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Fondo premium con partículas inmunológicas */
+.bg-immune-particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Animaciones para elementos decorativos */
+@keyframes pulse-border {
+  0% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.1); opacity: 0.3; }
+  100% { transform: scale(1); opacity: 0.6; }
+}
+
+@keyframes float-element {
+  0% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+  100% { transform: translateY(0) rotate(0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes rotate-slow {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Partículas inmunológicas flotantes */
+.immune-particle {
+  position: absolute;
+  border-radius: 50%;
+  animation: float-element 8s infinite ease-in-out;
+  opacity: 0.4;
+  filter: blur(2px);
+}
+
+/* Estilos para el carrusel premium */
+.carousel-premium {
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  height: 600px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  max-width: 1800px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.carousel-product-container {
+  width: 52%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-product-image-container {
+  width: 95%;
+  height: 90%;
+  background: transparent;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.carousel-product-image-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+.carousel-product-image {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  z-index: 2;
+}
+
+.carousel-product-image:hover {
+  transform: scale(1.03);
+}
+
+.carousel-content-container {
+  width: 48%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-content {
+  padding: 40px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
+  border-radius: 30px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: all 0.5s ease;
+}
+
+.carousel-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* Botones premium */
+.premium-btn {
+  padding: 14px 28px;
+  background: rgba(5, 106, 250, 0.8);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08), 0 0 0 1px rgba(255,255,255,0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-btn:hover {
+  background: rgba(5, 106, 250, 0.9);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12), 0 0 0 1px rgba(255,255,255,0.1);
+}
+
+/* Tarjetas premium */
+.premium-card {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  transition: all 0.5s ease;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.premium-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* Enhanced Header Design */
+.navbar-premium {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%) !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1800px;
+  padding: 20px 40px;
+  position: relative;
+}
+
+.logo-container img {
+  width: 110px;
+  height: 110px;
+  transition: all 0.4s ease;
+}
+
+.logo-container img:hover {
+  transform: scale(1.03);
+}
+
+.logo-title h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: white;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.nav-btn {
+  padding: 14px 28px;
+  background: rgba(255,255,255,0.12);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08), 0 0 0 1px rgba(255,255,255,0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-btn:hover {
+  background: rgba(255,242,223,0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12), 0 0 0 1px rgba(255,255,255,0.1);
+}
+
+/* Enhanced Footer Design */
+.footer-premium {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%) !important;
+  color: white;
+  padding: 80px 0 30px;
+  position: relative;
+  margin-top: 80px;
+  overflow: hidden;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.footer-logo img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.footer-logo img:hover {
+  transform: rotate(360deg) scale(1.1);
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
+}
+
+.footer-logo p {
+  color: var(--text-lighter);
+  margin-bottom: 0;
+  font-size: 1rem;
+  max-width: 300px;
+  line-height: 1.6;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.footer-section h4::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--accent-color);
+  margin-top: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer-links ul li a:hover {
+  color: white;
+  transform: translateX(5px);
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.contact-item i {
+  margin-right: 15px;
+  margin-top: 5px;
+  color: rgba(255,242,223,0.8);
+}
+
+.contact-item div {
+  flex: 1;
+}
+
+.contact-item h5 {
+  font-size: 0.9rem;
+  margin: 0 0 5px;
+  color: rgba(255,255,255,0.9);
+}
+
+.contact-item p {
+  margin: 0;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
+}
+
+.contact-item a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: white;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: rgba(255,242,223,0.2);
+  transform: translateY(-5px);
+}
+
+.footer-map-container {
+  overflow: hidden;
+}
+
+.footer-map {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-legal a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.footer-legal a:hover {
+  color: white;
+}
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+}
+
+.whatsapp-btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* Animación para el botón de WhatsApp */
+.whatsapp-btn a i {
+  font-size: 30px;
+  animation: pulse-border 2s infinite ease-in-out;
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-legal {
+    margin-top: 15px;
+    justify-content: center;
+  }
+
+  .logo-container img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .logo-title h1 {
+    font-size: 1.8rem;
+  }
+}
