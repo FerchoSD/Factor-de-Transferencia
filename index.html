@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MCPS5HTD');</script>
+<!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="InmunoMedi - Distribuidor de Factor de Transferencia y suplementos premium para fortalecer tu sistema inmune de manera natural y efectiva.">
@@ -24,12 +31,22 @@
   <link rel="icon" href="recursos/simbolo/SimbFCT.png" type="image/png">
   <link rel="apple-touch-icon" href="recursos/simbolo/SimbFCT.png">
   
-  <!-- Scripts premium para efectos especiales -->
+  <!-- Scripts ordenados para garantizar carga correcta -->
   <script src="inmunomedi-particles.js" defer></script>
+  
+  <!-- Scripts de templates (SIN DEFER para garantizar carga) -->
+  <script src="template/load-templates.js"></script>
+  
+  <!-- Script para cargar el preloader premium (se ejecuta DESPUÉS del template) -->
+  <script src="preloader-injector.js"></script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCPS5HTD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
   <!-- Fondo premium con partículas inmunológicas animadas -->
-  <div id="bg-particles" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; overflow: hidden;"></div>
+  <div id="bg-particles" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; overflow: hidden;"></div>
   
   <script>
     // Crear partículas inmunológicas para el fondo
@@ -106,142 +123,82 @@
       }
     });
   </script>
-  <!-- Preloader Premium -->
-  <div id="preloader" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #056afa 0%, #417ecd 100%); display: flex; align-items: center; justify-content: center; z-index: 9999; transition: opacity 0.5s ease, visibility 0.5s ease;">
-    <!-- Elementos decorativos del fondo -->
-    <div style="position: absolute; width: 100%; height: 100%; background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTQ0MCAxNDQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0tMTAgLTEwIGwxNSAxNSBNLTIwIDAgeDE0NDAgTTAgLTIwICAwIDE0NDAiIHN0cm9rZT0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjA1KSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+'); background-size: 30px 30px; opacity: 0.2;"></div>
-    <div style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(98, 200, 243, 0.2) 0%, rgba(98, 200, 243, 0) 70%);"></div>
-    <div style="position: absolute; bottom: -150px; left: -150px; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(255, 207, 250, 0.15) 0%, rgba(255, 207, 250, 0) 70%);"></div>
+  <!-- El preloader se cargará automáticamente desde preloader-premium.html -->
+
+  <!-- Header usando el sistema de templates -->
+  <div id="header-container"></div>
+
+  <!-- Título principal ultra premium con efectos especiales (versión compacta) -->
+  <div class="mega-title-container" style="position: relative; padding: 10px 0 5px; background: linear-gradient(180deg, rgba(5,106,250,0.05) 0%, rgba(255,255,255,0) 100%); overflow: hidden; margin-top: 0;">
+    <!-- Elementos decorativos más pequeños y sutiles -->
+    <div style="position: absolute; top: -60px; left: -60px; width: 150px; height: 150px; border-radius: 50%; background: linear-gradient(135deg, rgba(5,106,250,0.07) 0%, rgba(5,106,250,0.01) 100%); filter: blur(20px); animation: float-slow 15s infinite ease-in-out alternate; z-index: 0;"></div>
+    <div style="position: absolute; bottom: -80px; right: -60px; width: 180px; height: 180px; border-radius: 50%; background: linear-gradient(135deg, rgba(255,207,250,0.06) 0%, rgba(255,207,250,0) 70%); filter: blur(20px); animation: float-slow 12s infinite ease-in-out alternate 2s; z-index: 0;"></div>
     
-    <div class="preloader-content" style="position: relative; text-align: center;">
-      <!-- Logo con animación -->
-      <div style="position: relative; width: 150px; height: 150px; margin: 0 auto 30px; display: flex; align-items: center; justify-content: center;">
-        <!-- Círculos pulsantes -->
-        <div style="position: absolute; width: 100%; height: 100%; border-radius: 50%; background: rgba(255, 255, 255, 0.2); animation: pulse 2s infinite ease-in-out;"></div>
-        <div style="position: absolute; width: 85%; height: 85%; border-radius: 50%; background: rgba(255, 255, 255, 0.15); animation: pulse 2s infinite ease-in-out 0.4s;"></div>
-        <div style="position: absolute; width: 70%; height: 70%; border-radius: 50%; background: rgba(255, 255, 255, 0.1); animation: pulse 2s infinite ease-in-out 0.8s;"></div>
+    <!-- Contenedor central del título compacto -->
+    <div class="container text-center position-relative" style="z-index: 2;">
+      <!-- Título y subtítulo en layout horizontal para ahorrar espacio vertical -->
+      <div class="compact-title-layout" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 10px 25px;">
         
-        <!-- Logo principal -->
-        <img src="recursos/simbolo/SimbFCT.png" alt="InmunoMedi" class="preload-logo" style="width: 100px; height: 100px; position: relative; z-index: 2; filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2)); animation: float 3s ease-in-out infinite;">
+        <!-- Título principal con efectos 3D y resplandor (tamaño reducido) -->
+        <div style="position: relative; display: inline-flex; transform-style: preserve-3d; perspective: 800px;">
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle, rgba(5,106,250,0.3) 0%, rgba(5,106,250,0) 70%); filter: blur(15px); opacity: 0.5; z-index: -1; animation: pulse-slow 5s infinite alternate ease-in-out;"></div>
+          
+          <!-- Título más pequeño pero igual de impactante -->
+          <h1 style="font-family: 'Montserrat', sans-serif; font-size: min(3.2rem, 8vw); font-weight: 900; background: linear-gradient(135deg, #056afa 20%, #417ecd 50%, #056afa 80%); -webkit-background-clip: text; background-clip: text; color: transparent; text-transform: uppercase; letter-spacing: -1px; margin: 0; padding: 0; line-height: 1; position: relative; display: inline-block; transform: translateZ(5px); text-shadow: 0 3px 15px rgba(5,106,250,0.2); animation: title-float-compact 5s infinite ease-in-out;">
+            Revoluciona
+            <!-- Línea decorativa más sutil -->
+            <span style="position: absolute; bottom: 0; left: 10%; width: 80%; height: 3px; background: linear-gradient(90deg, transparent, rgba(5,106,250,0.7), transparent); border-radius: 3px; opacity: 0.6;"></span>
+          </h1>
+          
+          <!-- Partícula decorativa (reducidas a solo 2) -->
+          <div style="position: absolute; top: 20%; left: 15%; width: 6px; height: 6px; background: #056afa; border-radius: 50%; opacity: 0.5; filter: blur(1px); animation: float-particle 10s infinite ease-in-out;"></div>
+          <div style="position: absolute; top: 70%; right: 10%; width: 5px; height: 5px; background: #ffcffa; border-radius: 50%; opacity: 0.6; filter: blur(1px); animation: float-particle 12s infinite ease-in-out 1s;"></div>
+        </div>
+        
+        <!-- Subtítulo con efecto de degradado (más pequeño) -->
+        <div style="position: relative; display: inline-flex;">
+          <h2 style="font-family: 'Montserrat', sans-serif; font-size: min(2.8rem, 7vw); font-weight: 800; background: linear-gradient(135deg, #ffcffa 0%, #d3b2c2 100%); -webkit-background-clip: text; background-clip: text; color: transparent; text-transform: uppercase; margin: 0; padding: 0; line-height: 1; position: relative; display: inline-block; text-shadow: 0 3px 15px rgba(255,207,250,0.25); animation: subtitle-pulse 5s ease-in-out infinite alternate;">
+            Tu Sistema Inmune
+          </h2>
+        </div>
       </div>
       
-      <!-- Texto principal -->
-      <h2 style="color: white; font-weight: 700; font-size: 1.8rem; margin-bottom: 15px; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);">InmunoMedi</h2>
-      <p class="preload-text" style="color: rgba(255, 255, 255, 0.85); font-size: 1.1rem; margin-bottom: 30px; letter-spacing: 0.5px;">Fortaleciendo tu sistema inmunológico...</p>
-      
-      <!-- Indicador de carga animado -->
-      <div style="width: 200px; height: 4px; background: rgba(255, 255, 255, 0.2); border-radius: 4px; margin: 0 auto; overflow: hidden; position: relative;">
-        <div class="progress-bar" style="position: absolute; top: 0; left: 0; height: 100%; width: 30%; background: white; border-radius: 4px; animation: progress 2s ease infinite;"></div>
+      <!-- Línea decorativa central más sutil -->
+      <div style="position: relative; height: 4px; width: 20%; max-width: 250px; margin: 5px auto; background: linear-gradient(90deg, #056afa, #ffcffa); border-radius: 4px; overflow: hidden; box-shadow: 0 1px 6px rgba(5,106,250,0.2);">
+        <div style="position: absolute; top: 0; left: -100%; width: 200%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent); animation: shimmer 2s infinite ease-in-out; z-index: 2;"></div>
       </div>
     </div>
-    
-    <!-- Estilos de animación -->
-    <style>
-      @keyframes pulse {
-        0% { transform: scale(1); opacity: 0.6; }
-        50% { transform: scale(1.1); opacity: 0.4; }
-        100% { transform: scale(1); opacity: 0.6; }
-      }
-      
-      @keyframes float {
-        0% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
-        100% { transform: translateY(0); }
-      }
-      
-      @keyframes progress {
-        0% { left: -50%; width: 40%; }
-        100% { left: 100%; width: 40%; }
-      }
-    </style>
   </div>
-
-  <!-- Header Ultra Premium con la nueva paleta de colores -->
-  <header class="navbar-premium" id="inicio" style="margin-bottom: 0; padding: 0; background: linear-gradient(135deg, #056afa 0%, #417ecd 100%); position: sticky; top: 0; z-index: 1000; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
-    <!-- Elementos decorativos del header -->
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTQ0MCAxNDQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0tMTAgLTEwIGwxNSAxNSBNLTIwIDAgeDE0NDAgTTAgLTIwICAwIDE0NDAiIHN0cm9rZT0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjA1KSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+'); background-size: 30px 30px; opacity: 0.2;"></div>
-    <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle, rgba(98, 200, 243, 0.2) 0%, rgba(98, 200, 243, 0) 70%);"></div>
-    <div style="position: absolute; bottom: -50px; left: -50px; width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle, rgba(255, 207, 250, 0.15) 0%, rgba(255, 207, 250, 0) 70%);"></div>
-    
-    <div class="container header-container" style="display: flex; align-items: center; justify-content: space-between; max-width: 1800px; padding: 20px 40px; position: relative;">
-      <!-- Logo sin círculo y sin texto adicional -->
-      <div class="logo-container" style="display: flex; align-items: center;">
-        <a href="index.html" aria-label="Ir a la página principal de InmunoMedi" style="display: inline-block; transition: transform 0.3s ease;">
-          <img src="recursos/simbolo/SimbFCT.png" alt="Logo InmunoMedi" class="logo" style="width: 250px; height: auto; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-        </a>
-      </div>
-      
-      <!-- Navegación Premium Mejorada -->
-      <nav class="main-nav" style="position: relative;">
-        <ul class="nav-links" style="display: flex; gap: 18px; margin: 0; padding: 0; list-style: none; align-items: center;">
-          <!-- Botón Productos -->
-          <li><a href="productos.html" class="nav-link" style="text-decoration: none;">
-            <button class="nav-btn" style="padding: 14px 28px; background: rgba(255,255,255,0.12); color: white; border: none; border-radius: 30px; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.5px; cursor: pointer; transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 6px 15px rgba(0,0,0,0.08), 0 0 0 1px rgba(255,255,255,0.05); position: relative; overflow: hidden;" 
-              onmouseover="this.style.background='rgba(255,242,223,0.25)'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12), 0 0 0 1px rgba(255,255,255,0.1)'"
-              onmouseout="this.style.background='rgba(255,255,255,0.12)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.08), 0 0 0 1px rgba(255,255,255,0.05)'">
-              <!-- Efecto de resplandor en hover -->
-              <span style="position: absolute; top: -30px; left: -30px; width: 80px; height: 80px; background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%); opacity: 0; transition: opacity 0.4s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0'"></span>
-              <i class="fas fa-box-open" style="margin-right: 10px; font-size: 1rem;"></i> Productos
-            </button>
-          </a></li>
-          
-          <!-- Botón Nosotros -->
-          <li><a href="nosotros.html" class="nav-link" style="text-decoration: none;">
-            <button class="nav-btn" style="padding: 14px 28px; background: rgba(255,255,255,0.12); color: white; border: none; border-radius: 30px; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.5px; cursor: pointer; transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 6px 15px rgba(0,0,0,0.08), 0 0 0 1px rgba(255,255,255,0.05); position: relative; overflow: hidden;" 
-              onmouseover="this.style.background='rgba(255,242,223,0.25)'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12), 0 0 0 1px rgba(255,255,255,0.1)'"
-              onmouseout="this.style.background='rgba(255,255,255,0.12)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.08), 0 0 0 1px rgba(255,255,255,0.05)'">
-              <span style="position: absolute; top: -30px; left: -30px; width: 80px; height: 80px; background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%); opacity: 0; transition: opacity 0.4s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0'"></span>
-              <i class="fas fa-users" style="margin-right: 10px; font-size: 1rem;"></i> Nosotros
-            </button>
-          </a></li>
-          
-          <!-- Botón Contacto -->
-          <li><a href="contacto.html" class="nav-link" style="text-decoration: none;">
-            <button class="nav-btn" style="padding: 14px 28px; background: rgba(255,255,255,0.12); color: white; border: none; border-radius: 30px; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.5px; cursor: pointer; transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 6px 15px rgba(0,0,0,0.08), 0 0 0 1px rgba(255,255,255,0.05); position: relative; overflow: hidden;" 
-              onmouseover="this.style.background='rgba(255,242,223,0.25)'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12), 0 0 0 1px rgba(255,255,255,0.1)'"
-              onmouseout="this.style.background='rgba(255,255,255,0.12)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.08), 0 0 0 1px rgba(255,255,255,0.05)'">
-              <span style="position: absolute; top: -30px; left: -30px; width: 80px; height: 80px; background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%); opacity: 0; transition: opacity 0.4s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0'"></span>
-              <i class="fas fa-envelope" style="margin-right: 10px; font-size: 1rem;"></i> Contacto
-            </button>
-          </a></li>
-          
-          <!-- Botón Carrito con efecto especial -->
-          <li><a href="carrito.html" class="nav-link" style="text-decoration: none;">
-            <button class="nav-btn" style="padding: 14px 28px; background: linear-gradient(135deg, rgba(255,242,223,0.3) 0%, rgba(255,242,223,0.15) 100%); color: white; border: none; border-radius: 30px; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.5px; cursor: pointer; transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 6px 20px rgba(0,0,0,0.1), 0 0 0 1px rgba(255,255,255,0.1); position: relative;" 
-              onmouseover="this.style.background='linear-gradient(135deg, #fff2df 0%, #fff2df 100%)'; this.style.color='#056afa'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 30px rgba(0,0,0,0.15), 0 0 0 1px rgba(255,255,255,0.2)'"
-              onmouseout="this.style.background='linear-gradient(135deg, rgba(255,242,223,0.3) 0%, rgba(255,242,223,0.15) 100%)'; this.style.color='white'; this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.1), 0 0 0 1px rgba(255,255,255,0.1)'">
-              <i class="fas fa-shopping-cart" style="margin-right: 10px; font-size: 1rem;"></i> Carrito 
-              <!-- Contador de carrito mejorado -->
-              <span class="cart-count" style="position: absolute; top: -10px; right: -10px; background: linear-gradient(135deg, #fff2df 0%, #fff2df 100%); color: #056afa; border-radius: 50%; width: 26px; height: 26px; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; font-weight: 700; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border: 2px solid rgba(255,255,255,0.8); transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 6px 15px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)'">0</span>
-            </button>
-          </a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
+  
+  <!-- Definición de nuevas animaciones más sutiles para el título compacto -->
+  <style>
+    @keyframes title-float-compact {
+      0% { transform: translateZ(5px); }
+      50% { transform: translateZ(12px); }
+      100% { transform: translateZ(5px); }
+    }
+  </style>
+  
   <!-- Banner principal con introducción integrada -->
-  <section class="banner-principal" style="margin-top: 0; margin-bottom: 50px; padding-top: 20px; position: relative;">
+  <section class="banner-principal" style="margin-top: 0; margin-bottom: 50px; padding-top: 0; position: relative;">
     <div class="intro-banner-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden;">
       <div class="background-image-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
-        <div id="background-slider" class="active-slide-bg" style="background-image: url('recursos/carrusel/CelestinFT__2024_V4.webp'); background-size: cover; background-position: center; filter: blur(8px) opacity(0.15); width: 100%; height: 100%; transition: background-image 1s ease-in-out;"></div>
+        <div id="background-slider" class="active-slide-bg" style="background-image: url('recursos/carrusel/CelestinFT__2024_V4.webp'); background-size: cover; background-position: center; filter: blur(8px) opacity(0.08); width: 100%; height: 100%; transition: background-image 1s ease-in-out;"></div>
       </div>
     </div>
     <div class="container-fluid px-4">
-      <div class="banner-container carousel-premium" style="background: transparent;">
+      <div class="banner-container carousel-premium" style="background: transparent !important; opacity: 1; visibility: visible; border: none; box-shadow: none; outline: none;">
 
-        <div id="carouselMain" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000" style="height: 100%; background: transparent;">
-          <div class="carousel-inner" style="height: 100%;">
+        <div id="carouselMain" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000" style="height: 100%; background: transparent !important;">
+          <div class="carousel-inner" style="height: 100%; background: transparent !important;">
             <!-- Slide 1: Innovación y Fundamento Científico - Diseño Ultra Premium -->
-            <div class="carousel-item active" style="height: 100%; display: flex; align-items: center; justify-content: center; padding: 0 50px;">
-              <div style="display: flex; width: 100%; max-width: 1600px; margin: 0 auto; height: 600px; position: relative; gap: 30px; background: transparent;">
-                <!-- Fondo general del slide con textura sutil y gradiente -->
-                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(5, 106, 250, 0.05) 0%, rgba(98, 200, 243, 0.1) 100%); z-index: 0;"></div>
-                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTQ0MCAxNDQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0tMTAgLTEwIGwxNSAxNSBNLTIwIDAgeDE0NDAgTTAgLTIwICAwIDE0NDAiIHN0cm9rZT0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjA1KSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+'); background-size: 30px 30px; opacity: 0.3; z-index: 0;"></div>
+            <div class="carousel-item active" style="height: 100%; display: flex; align-items: center; justify-content: center; padding: 0 20px; background: transparent !important;">
+              <div style="display: flex; width: 100%; max-width: 1400px; margin: 0 auto; height: 550px; position: relative; gap: 25px; background: transparent !important;">
+                <!-- Fondo general del slide con textura sutil y gradiente (transparente) -->
                 
                 <!-- Contenedor de la imagen con borde redondeado -->
-                <div style="width: 52%; position: relative; z-index: 2; display: flex; align-items: center; justify-content: center;">
-                  <div style="width: 95%; height: 90%; background: linear-gradient(135deg, #056afa 0%, #417ecd 100%); border-radius: 30px; overflow: hidden; position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.2); transition: all 0.5s ease;" onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 25px 60px rgba(0,0,0,0.25)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 20px 50px rgba(0,0,0,0.2)'">
+                <div style="width: 52%; position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; background: transparent !important;">
+                  <div style="width: 95%; height: 90%; background: transparent !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; border-radius: 30px; overflow: hidden; position: relative; box-shadow: none; transition: all 0.5s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
                     <!-- Resplandor decorativo -->
                     <div style="position: absolute; bottom: -50px; left: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(5, 106, 250, 0.08) 0%, rgba(5, 106, 250, 0) 70%); z-index: 1;"></div>
                     
@@ -256,36 +213,72 @@
                   </div>
                 </div>
                 
-                <!-- Contenido informativo con diseño premium y borde redondeado -->
-                <div style="width: 48%; position: relative; z-index: 2; display: flex; align-items: center;">
-                  <div style="width: 95%; height: 90%; padding: 50px; background: white; border-radius: 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); position: relative; overflow: hidden; transition: all 0.5s ease; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 30px 60px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 20px 50px rgba(0,0,0,0.1)'">
+                <!-- Contenido informativo con diseño ULTRA premium y borde redondeado -->
+                <div style="width: 48%; position: relative; z-index: 2; background: transparent !important;">
+                  <!-- Animación de fondo flotante -->
+                  <div class="floating-bg" style="position: absolute; width: 500px; height: 500px; background: none !important; border-radius: 50%; filter: none !important; z-index: -1; animation: none !important;"></div>
+                  
+                  <!-- Contenedor principal con efecto glassmorphism premium transparente -->
+                  <div style="width: 100%; padding: 30px 50px 50px; background: transparent !important; border-radius: 30px; box-shadow: none !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; position: relative; overflow: hidden; transition: none !important; display: flex; flex-direction: column;" 
+                    onmouseover="" 
+                    onmouseout="">
                     
-                    <div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center;">
-                      <!-- Título principal con estilo moderno -->
-                      <h2 style="font-size: 3rem; font-weight: 900; margin-bottom: 15px; color: #056afa; line-height: 1.2; position: relative; z-index: 1;">
-                        Innovación
-                      </h2>
-                      <h3 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 15px; color: #ffcffa; line-height: 1.2; position: relative; z-index: 1;">
-                        y fundamento
-                      </h3>
-                      <h2 style="font-size: 3rem; font-weight: 900; margin-bottom: 25px; color: #056afa; line-height: 1.2; position: relative; z-index: 1;">
-                        científico
-                      </h2>
-                      
-                      <!-- Línea decorativa -->
-                      <div style="width: 100px; height: 4px; background: linear-gradient(to right, #ffcffa, #d3b2c2); margin-bottom: 25px; border-radius: 4px;"></div>
-                      
-                      <!-- Texto principal con estilo mejorado -->
-                      <p style="font-size: 1.1rem; line-height: 1.7; color: #333; font-weight: 400; margin-bottom: 25px; position: relative; z-index: 1; max-width: 100%;">
-                        Respaldados por la ciencia y la innovación, como distribuidores de Factor de Transferencia, nos dedicamos a ofrecer soluciones basadas en avances comprobados. Nuestro enfoque se centra en promover tu bienestar a través de productos diseñados con rigor científico.
-                      </p>
-                      
-                      <!-- Botón de acción premium -->
-                      <a href="productos.html" class="btn-premium" style="display: inline-block; padding: 14px 30px; background: linear-gradient(135deg, #ffcffa 0%, #d3b2c2 100%); color: #056afa; text-decoration: none; border-radius: 30px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(211,178,194,0.3);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 25px rgba(211,178,194,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(211,178,194,0.3)'">
-                        <i class="fas fa-microscope" style="margin-right: 8px;"></i> Descubrir productos
-                      </a>
+                    <!-- Elementos decorativos flotantes -->
+                    <div style="position: absolute; bottom: -80px; left: -30px; width: 200px; height: 200px; border-radius: 50%; background: none !important; animation: none !important;"></div>
+                    
+                    <!-- Partículas flotantes -->                    
+                    <div class="particle" style="position: absolute; width: 8px; height: 8px; border-radius: 50%; background: transparent !important; top: 15%; left: 10%; filter: none !important; animation: none !important;"></div>
+                    <div class="particle" style="position: absolute; width: 12px; height: 12px; border-radius: 50%; background: transparent !important; top: 70%; left: 85%; filter: none !important; animation: none !important;"></div>
+                    <div class="particle" style="position: absolute; width: 6px; height: 6px; border-radius: 50%; background: transparent !important; top: 30%; left: 80%; filter: none !important; animation: none !important;"></div>
+                    
+                    <!-- Bordes brillantes animados -->
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; border-radius: 30px; box-shadow: none !important; overflow: hidden;">
+                        <div style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: none !important; animation: none !important;"></div>
                     </div>
                     
+                    <!-- Efecto de texto con resplandor -->
+                    <div style="position: absolute; top: 50px; left: 30px; width: 80%; height: 60%; background: none !important; z-index: 0; filter: none !important;"></div>
+                      
+                    <!-- Título con tipografía 3D y animada -->
+                    <div class="title-wrapper" style="position: relative; z-index: 2; margin-bottom: 15px;">
+                      <h2 class="premium-title" style="font-size: 3rem; font-weight: 900; color: #056afa; line-height: 1.1; margin: 0; position: relative; display: inline-block; text-shadow: none !important; transform: none !important; animation: none !important;">
+                        Innovación
+                        <span style="position: absolute; bottom: -5px; left: 0; width: 30%; height: 4px; background: none !important; border-radius: 4px;"></span>
+                      </h2>
+                    </div>
+                    
+                    <div class="subtitle-wrapper" style="position: relative; z-index: 2; margin-bottom: 15px; transform-style: preserve-3d;">
+                      <h3 style="font-size: 2.5rem; font-weight: 700; color: #ffcffa; line-height: 1.1; margin: 0; display: inline-block; text-shadow: 0 5px 15px rgba(255,207,250,0.3); background: linear-gradient(135deg, #ffcffa 0%, #d3b2c2 100%); -webkit-background-clip: text; background-clip: text; color: transparent; animation: subtitle-pulse 5s ease-in-out infinite alternate;">
+                        y fundamento
+                      </h3>
+                    </div>
+                    
+                    <div class="title-wrapper" style="position: relative; z-index: 2; margin-bottom: 30px; transform-style: preserve-3d;">
+                      <h2 class="premium-title" style="font-size: 3rem; font-weight: 900; color: #056afa; line-height: 1.1; margin: 0; position: relative; display: inline-block; text-shadow: none !important; transform: translateZ(10px); animation: title-float 4s ease-in-out infinite alternate 1s;">
+                        científico
+                        <span style="position: absolute; bottom: -5px; right: 0; width: 30%; height: 4px; background: none !important; border-radius: 4px;"></span>
+                      </h2>
+                    </div>
+                    
+                    <!-- Línea decorativa con efecto brillante avanzado -->
+                    <div style="width: 150px; height: 4px; background: transparent !important; margin-bottom: 30px; border-radius: 4px; position: relative; overflow: hidden; box-shadow: none !important;">
+                      <div style="position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: none !important; animation: none !important; z-index: 2;"></div>
+                    </div>
+                    
+                    <!-- Texto principal con estilo premium y efecto hover interactivo -->
+                    <p style="font-size: 1.2rem; line-height: 1.8; color: #333; font-weight: 400; margin: -40px 0 30px 0; position: relative; z-index: 1; text-shadow: none; background: transparent !important; padding: 20px; border-radius: 15px; box-shadow: none; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; transition: all 0.3s ease;" 
+                      onmouseover="this.style.background='transparent'; this.style.transform='translateY(-5px)'; this.style.boxShadow='none'" 
+                      onmouseout="this.style.background='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                      Respaldados por la <span style="font-weight: 700; color: #056afa; text-shadow: 0 2px 5px rgba(5,106,250,0.2);">ciencia y la innovación</span>, como distribuidores de Factor de Transferencia, nos dedicamos a ofrecer <span style="font-weight: 700; color: #056afa; text-shadow: 0 2px 5px rgba(5,106,250,0.2);">soluciones basadas en avances comprobados</span>.
+                    </p>
+                      
+                    <!-- Botón de acción premium -->
+                    <div style="margin-top: -40px; position: relative; z-index: 20; overflow: visible;">
+                      <a href="productos.html" class="btn-premium" style="display: inline-block; width: auto; padding: 14px 36px; background: #ffcffa; background-image: none; color: #056afa; text-decoration: none; border-radius: 30px; font-weight: 700; font-size: 1.1rem; letter-spacing: 0.5px; transition: all 0.3s ease; box-shadow: 0 8px 20px rgba(211,178,194,0.4);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 28px rgba(211,178,194,0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 20px rgba(211,178,194,0.4)'">
+                        <i class="fas fa-microscope" style="margin-right: 10px;"></i> DESCUBRIR PRODUCTOS
+                      </a>
+                    </div>
+                  
                     <!-- Puntos decorativos -->
                     <div style="display: flex; gap: 15px; margin-top: 25px; position: relative; z-index: 1;">
                       <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffcffa; opacity: 0.8;"></div>
@@ -297,30 +290,23 @@
               </div>
             </div>
             
-            <!-- Estilos para animaciones -->
-            <style>
-              @keyframes shimmer {
-                0% { left: -100%; }
-                100% { left: 100%; }
-              }
-            </style>
             <!-- Slide 2: Equilibrio Saludable en tu Microbiota - Diseño Premium -->
-            <div class="carousel-item" style="height: 100%; display: flex; align-items: center; justify-content: center; padding: 0 50px;">
+            <div class="carousel-item" style="height: 100%; display: flex; align-items: center; justify-content: center; padding: 0 50px; background: transparent !important;">
               <div style="display: flex; width: 100%; max-width: 1600px; margin: 0 auto; height: 600px; position: relative; gap: 30px; background: transparent;">
                 <!-- Fondo general del slide con textura sutil -->
-                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTQ0MCAxNDQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0tMTAgLTEwIGwxNSAxNSBNLTIwIDAgeDE0NDAgTTAgLTIwICAwIDE0NDAiIHN0cm9rZT0icmdiYSgyNTUsIDIwNywgMjUwLCAwLjA1KSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+'); background-size: 30px 30px; opacity: 0.3; z-index: 0;"></div>
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: none !important; z-index: 0;"></div>
                 
                 <!-- Contenedor de la imagen con borde redondeado -->
-                <div style="width: 52%; position: relative; z-index: 2; display: flex; align-items: center; justify-content: center;">
-                  <div style="width: 95%; height: 90%; background: linear-gradient(135deg, #ffcffa 0%, #d3b2c2 100%); border-radius: 30px; overflow: hidden; position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.2); transition: all 0.5s ease;" onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 25px 60px rgba(0,0,0,0.25)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 20px 50px rgba(0,0,0,0.2)'">
+                <div style="width: 52%; position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; background: transparent !important;">
+                  <div style="width: 95%; height: 90%; background: none !important; border-radius: 30px; overflow: hidden; position: relative; box-shadow: none !important; transition: all 0.5s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
                     <!-- Textura sutil para el fondo de la imagen -->
-                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjAzIiBkPSJNMzAgMEMxMy40MyAwIDAgMTMuNDMgMCAzMHMxMy40MyAzMCAzMCAzMCAzMC0xMy40MyAzMC0zMFM0Ni41NyAwIDMwIDB6bTAgMWM1Ljc2IDAgMTEuMTEgMS41OCAxNS43IDQuMzNsMTQuOTcgMTQuOTdDNTguNDIgMTguODkgNjAgMjQuMjQgNjAgMzBjMCAxNi41NC0xMy40NiAzMC0zMCAzMFMwIDQ2LjU0IDAgMzAgMTMuNDYgMCAzMCAweiIvPjxwYXRoIGZpbGw9IiNGRkYiIGZpbGwtb3BhY2l0eT0iLjA1IiBkPSJNMzAgMWM1Ljc2IDAgMTEuMTEgMS41OCAxNS43IDQuMzNsMTQuOTcgMTQuOTdDNTguNDIgMTguODkgNjAgMjQuMjQgNjAgMzBjMCAxNi41NC0xMy40NiAzMC0zMCAzMFMwIDQ2LjU0IDAgMzAgMTMuNDYgMCAzMCAweiIvPjwvZz48L3N2Zz4='); background-size: 120px 120px; opacity: 0.3; z-index: 1;"></div>
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: none !important; z-index: 1;"></div>
                     
                     <!-- Imagen del producto con efectos premium -->
                     <img src="recursos/carrusel/DailyPRO_50_2024_V4.webp" alt="Daily Pro 50" style="object-fit: cover; width: 100%; height: 100%; transition: transform 0.8s ease; filter: drop-shadow(0 10px 25px rgba(0,0,0,0.15)); z-index: 999 !important; position: relative;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'" class="carousel-product-image">
                     
                     <!-- Resplandor decorativo -->
-                    <div style="position: absolute; bottom: -50px; left: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%); z-index: 1;"></div>
+                    <div style="position: absolute; bottom: -50px; left: -50px; width: 200px; height: 200px; background: none !important; z-index: 1;"></div>
                     
                     <!-- Elementos decorativos circulares -->
                     <div style="position: absolute; top: 40px; right: 40px; width: 120px; height: 120px; border: 2px solid rgba(255,255,255,0.3); border-radius: 50%; z-index: 1 !important;"></div>
@@ -328,35 +314,82 @@
                   </div>
                 </div>
                 
-                <!-- Contenido informativo con diseño premium y borde redondeado -->
-                <div style="width: 48%; position: relative; z-index: 2; display: flex; align-items: center;">
-                  <div style="width: 95%; height: 90%; padding: 50px; background: white; border-radius: 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); position: relative; overflow: hidden; transition: all 0.5s ease; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 30px 60px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 20px 50px rgba(0,0,0,0.1)'">
+                <!-- Contenido informativo con diseño ULTRA premium y borde redondeado -->
+                <div style="width: 48%; position: relative; z-index: 2; background: transparent !important;">
+                  <!-- Animación de fondo flotante -->
+                  <div class="floating-bg" style="position: absolute; width: 500px; height: 500px; background: none !important; border-radius: 50%; filter: none !important; z-index: -1; animation: none !important;"></div>
+                  
+                  <!-- Contenedor principal con efecto glassmorphism premium transparente -->
+                  <div style="width: 100%; padding: 30px 50px 50px; background: transparent !important; border-radius: 30px; box-shadow: none !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; position: relative; overflow: hidden; transition: none !important; display: flex; flex-direction: column;" 
+                    onmouseover="" 
+                    onmouseout="">
                     
-                    <!-- Título principal con estilo moderno -->
-                    <h2 style="font-size: 3rem; font-weight: 900; margin-bottom: 20px; color: #056afa; line-height: 1.2; position: relative; z-index: 1;">
-                      Equilibrio
-                    </h2>
-                    <h3 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 20px; color: #d3b2c2; line-height: 1.2; position: relative; z-index: 1;">
-                      saludable
-                    </h3>
-                    <h2 style="font-size: 3rem; font-weight: 900; margin-bottom: 30px; color: #056afa; line-height: 1.2; position: relative; z-index: 1;">
-                      en tu microbiota
-                    </h2>
+                    <!-- Elementos decorativos flotantes -->
+                    <div style="position: absolute; bottom: -80px; left: -30px; width: 200px; height: 200px; border-radius: 50%; background: none !important; animation: none !important;"></div>
                     
-                    <!-- Línea decorativa con animación -->
-                    <div style="width: 100px; height: 4px; background: linear-gradient(to right, #ffcffa, #d3b2c2); margin-bottom: 30px; border-radius: 4px; position: relative; overflow: hidden;">
-                      <div style="position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(to right, transparent, rgba(255,255,255,0.8), transparent); animation: shimmer 2s infinite; z-index: 2;"></div>
+                    <!-- Partículas flotantes -->                    
+                    <div class="particle" style="position: absolute; width: 8px; height: 8px; border-radius: 50%; background: transparent !important; top: 15%; left: 10%; filter: none !important; animation: none !important;"></div>
+                    <div class="particle" style="position: absolute; width: 12px; height: 12px; border-radius: 50%; background: transparent !important; top: 70%; left: 85%; filter: none !important; animation: none !important;"></div>
+                    <div class="particle" style="position: absolute; width: 6px; height: 6px; border-radius: 50%; background: transparent !important; top: 30%; left: 80%; filter: none !important; animation: none !important;"></div>
+                    
+                    <!-- Bordes brillantes animados -->
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; border-radius: 30px; box-shadow: none !important; overflow: hidden;">
+                        <div style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: none !important; animation: none !important;"></div>
                     </div>
                     
-                    <!-- Texto principal con estilo mejorado -->
-                    <p style="font-size: 1.1rem; line-height: 1.7; color: #333; font-weight: 400; margin-bottom: 30px; position: relative; z-index: 1;">
-                      Nuestra misión es apoyarte en mantener un equilibrio óptimo en tu microbiota intestinal. Este balance es esencial para una digestión saludable y un cuerpo en armonía, aprovechando los beneficios que la naturaleza y la investigación pueden brindar.
-                    </p>
-                    
-                    <!-- Botón de acción premium -->
-                    <a href="productos.html#probioticos" style="display: inline-block; padding: 14px 30px; background: linear-gradient(135deg, #ffcffa 0%, #d3b2c2 100%); color: #056afa; text-decoration: none; border-radius: 30px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(211,178,194,0.3);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 25px rgba(211,178,194,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(211,178,194,0.3)'">
-                      <i class="fas fa-bacterium" style="margin-right: 8px;"></i> Descubrir productos
-                    </a>
+                    <div style="width: 100%; flex-grow: 1; position: relative;">
+                      <!-- Efecto de texto con resplandor -->
+                      <div style="position: absolute; top: -10px; left: -20px; width: 140%; height: 100%; background: none !important; z-index: 0; filter: none !important;"></div>
+                      
+                      <!-- Título con tipografía 3D y animada -->
+                      <div class="title-wrapper" style="position: relative; z-index: 2; margin-bottom: 15px;">
+                        <h2 class="premium-title" style="font-size: 3rem; font-weight: 900; color: #056afa; line-height: 1.1; margin: 0; position: relative; display: inline-block; text-shadow: none !important; transform: none !important; animation: none !important;">
+                          Equilibrio
+                          <span style="position: absolute; bottom: -5px; left: 0; width: 30%; height: 4px; background: none !important; border-radius: 4px;"></span>
+                        </h2>
+                      </div>
+                      
+                      <div class="subtitle-wrapper" style="position: relative; z-index: 2; margin-bottom: 15px; transform-style: preserve-3d;">
+                        <h3 style="font-size: 2.5rem; font-weight: 700; color: #ffcffa; line-height: 1.1; margin: 0; display: inline-block; text-shadow: 0 5px 15px rgba(255,207,250,0.3); background: linear-gradient(135deg, #ffcffa 0%, #d3b2c2 100%); -webkit-background-clip: text; background-clip: text; color: transparent; animation: subtitle-pulse 5s ease-in-out infinite alternate;">
+                          saludable
+                        </h3>
+                      </div>
+                      
+                      <div class="title-wrapper" style="position: relative; z-index: 2; margin-bottom: 30px; transform-style: preserve-3d;">
+                        <h2 class="premium-title" style="font-size: 3rem; font-weight: 900; color: #056afa; line-height: 1.1; margin: 0; position: relative; display: inline-block; text-shadow: none !important; transform: translateZ(10px); animation: title-float 4s ease-in-out infinite alternate 1s;">
+                          en tu microbiota
+                          <span style="position: absolute; bottom: -5px; right: 0; width: 30%; height: 4px; background: none !important; border-radius: 4px;"></span>
+                        </h2>
+                      </div>
+                      
+                      <!-- Línea decorativa con efecto brillante avanzado -->
+                      <div style="width: 150px; height: 4px; background: transparent !important; margin-bottom: 30px; border-radius: 4px; position: relative; overflow: hidden; box-shadow: none !important;">
+                        <div style="position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: none !important; animation: none !important; z-index: 2;"></div>
+                      </div>
+                      
+                      <!-- Texto principal con estilo premium y efecto hover interactivo -->
+                      <p style="font-size: 1.2rem; line-height: 1.8; color: #333; font-weight: 400; margin: -40px 0 30px 0; position: relative; z-index: 1; text-shadow: none; background: transparent !important; padding: 20px; border-radius: 15px; box-shadow: none; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; transition: all 0.3s ease;" 
+                        onmouseover="this.style.background='transparent'; this.style.transform='translateY(-5px)'; this.style.boxShadow='none'" 
+                        onmouseout="this.style.background='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                        Nuestra misión es apoyarte en mantener un <span style="font-weight: 700; color: #056afa; text-shadow: 0 2px 5px rgba(5,106,250,0.2);">equilibrio óptimo</span> en tu microbiota intestinal. Este balance es <span style="font-weight: 700; color: #056afa; text-shadow: 0 2px 5px rgba(5,106,250,0.2);">esencial para una digestión saludable</span>.
+                      </p>
+                    </div>
+                      
+                    <div style="width: 100%; display: flex; flex-direction: column; align-items: flex-start;">
+                      <!-- Botón de acción premium -->
+                      <div style="margin-top: -40px; position: relative; z-index: 20; overflow: visible;">
+                        <a href="productos.html#probioticos" class="btn-premium" style="display: inline-block; width: auto; padding: 14px 36px; background: #ffcffa; background-image: none; color: #056afa; text-decoration: none; border-radius: 30px; font-weight: 700; font-size: 1.1rem; letter-spacing: 0.5px; transition: all 0.3s ease; box-shadow: 0 8px 20px rgba(211,178,194,0.4);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 28px rgba(211,178,194,0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 20px rgba(211,178,194,0.4)'">
+                          <i class="fas fa-bacterium" style="margin-right: 10px;"></i> DESCUBRIR PRODUCTOS
+                        </a>
+                      </div>
+                      
+                      <!-- Puntos decorativos -->
+                      <div style="display: flex; gap: 15px; margin-top: 25px; position: relative; z-index: 1;">
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffcffa; opacity: 0.8;"></div>
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffcffa; opacity: 0.6;"></div>
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffcffa; opacity: 0.4;"></div>
+                      </div>
+                    </div>
                     
                     <!-- Elemento decorativo circular en esquina -->
                     <div style="position: absolute; top: 40px; left: 30px; width: 60px; height: 60px; border: 3px solid rgba(5,106,250,0.15); border-radius: 50%; z-index: 0;"></div>
@@ -365,14 +398,14 @@
               </div>
             </div>
             <!-- Slide 3: Fortalecimiento Natural del Sistema Inmunológico - Diseño Premium -->
-            <div class="carousel-item" style="height: 100%; display: flex; align-items: center; justify-content: center; padding: 0 50px;">
+            <div class="carousel-item" style="height: 100%; display: flex; align-items: center; justify-content: center; padding: 0 50px; background: transparent !important;">
               <div style="display: flex; width: 100%; max-width: 1600px; margin: 0 auto; height: 600px; position: relative; gap: 30px; background: transparent;">
                 <!-- Fondo general del slide con textura sutil -->
                 <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTQ0MCAxNDQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0tMTAgLTEwIGwxNSAxNSBNLTIwIDAgeDE0NDAgTTAgLTIwICAwIDE0NDAiIHN0cm9rZT0icmdiYSgyNTUsIDI0MiwgMjIzLCAwLjA1KSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+'); background-size: 30px 30px; opacity: 0.3; z-index: 0;"></div>
                 
                 <!-- Contenedor de la imagen con borde redondeado -->
-                <div style="width: 52%; position: relative; z-index: 2; display: flex; align-items: center; justify-content: center;">
-                  <div style="width: 95%; height: 90%; background: linear-gradient(135deg, #fff2df 0%, #fff2df 100%); border-radius: 30px; overflow: hidden; position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.2); transition: all 0.5s ease;" onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 25px 60px rgba(0,0,0,0.25)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 20px 50px rgba(0,0,0,0.2)'">
+                <div style="width: 52%; position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; background: transparent !important;">
+                  <div style="width: 95%; height: 90%; background: none !important; border-radius: 30px; overflow: hidden; position: relative; box-shadow: none !important; transition: all 0.5s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
                     <!-- Textura sutil para el fondo de la imagen -->
                     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxjaXJjbGUgY3g9IjMwIiBjeD0iMzAiIHI9IjE1Ii8+PC9nPjwvc3ZnPg=='); background-size: 120px 120px; opacity: 0.3; z-index: 1;"></div>
                     
@@ -388,34 +421,81 @@
                   </div>
                 </div>
                 
-                <!-- Contenido informativo con diseño premium y borde redondeado -->
-                <div style="width: 48%; position: relative; z-index: 2; display: flex; align-items: center;">
-                  <div style="width: 95%; height: 90%; padding: 50px; background: white; border-radius: 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); position: relative; overflow: hidden; transition: all 0.5s ease; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 30px 60px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 20px 50px rgba(0,0,0,0.1)'">
+                <!-- Contenido informativo con diseño ULTRA premium y borde redondeado -->
+                <div style="width: 48%; position: relative; z-index: 2; background: transparent !important;">
+                  <!-- Animación de fondo flotante -->
+                  <div class="floating-bg" style="position: absolute; width: 500px; height: 500px; background: none !important; border-radius: 50%; filter: none !important; z-index: -1; animation: none !important;"></div>
+                  
+                  <!-- Contenedor principal con efecto glassmorphism premium transparente -->
+                  <div style="width: 100%; padding: 30px 50px 50px; background: transparent !important; border-radius: 30px; box-shadow: none !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; position: relative; overflow: hidden; transition: none !important; display: flex; flex-direction: column;" 
+                    onmouseover="" 
+                    onmouseout="">
                     
-                    <div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center;">
-                      <!-- Título principal con estilo moderno -->
-                      <h2 style="font-size: 3rem; font-weight: 900; margin-bottom: 15px; color: #056afa; line-height: 1.2; position: relative; z-index: 1;">
-                        Fortalecimiento
-                      </h2>
-                      <h3 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 15px; color: #ffcffa; line-height: 1.2; position: relative; z-index: 1;">
-                        natural
-                      </h3>
-                      <h2 style="font-size: 3rem; font-weight: 900; margin-bottom: 25px; color: #056afa; line-height: 1.2; position: relative; z-index: 1;">
-                        del sistema inmunológico
-                      </h2>
+                    <!-- Elementos decorativos flotantes -->
+                    <div style="position: absolute; bottom: -80px; left: -30px; width: 200px; height: 200px; border-radius: 50%; background: none !important; animation: none !important;"></div>
+                    
+                    <!-- Partículas flotantes -->                    
+                    <div class="particle" style="position: absolute; width: 8px; height: 8px; border-radius: 50%; background: transparent !important; top: 15%; left: 10%; filter: none !important; animation: none !important;"></div>
+                    <div class="particle" style="position: absolute; width: 12px; height: 12px; border-radius: 50%; background: transparent !important; top: 70%; left: 85%; filter: none !important; animation: none !important;"></div>
+                    <div class="particle" style="position: absolute; width: 6px; height: 6px; border-radius: 50%; background: transparent !important; top: 30%; left: 80%; filter: none !important; animation: none !important;"></div>
+                    
+                    <!-- Bordes brillantes animados -->
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; border-radius: 30px; box-shadow: none !important; overflow: hidden;">
+                        <div style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: none !important; animation: none !important;"></div>
+                    </div>
+                    
+                    <div style="width: 100%; flex-grow: 1; position: relative;">
+                      <!-- Efecto de texto con resplandor -->
+                      <div style="position: absolute; top: -10px; left: -20px; width: 140%; height: 100%; background: none !important; z-index: 0; filter: none !important;"></div>
                       
-                      <!-- Línea decorativa -->
-                      <div style="width: 100px; height: 4px; background: linear-gradient(to right, #ffcffa, #d3b2c2); margin-bottom: 25px; border-radius: 4px;"></div>
+                      <!-- Título con tipografía 3D y animada -->
+                      <div class="title-wrapper" style="position: relative; z-index: 2; margin-bottom: 15px;">
+                        <h2 class="premium-title" style="font-size: 3rem; font-weight: 900; color: #056afa; line-height: 1.1; margin: 0; position: relative; display: inline-block; text-shadow: none !important; transform: none !important; animation: none !important;">
+                          Fortalecimiento
+                          <span style="position: absolute; bottom: -5px; left: 0; width: 30%; height: 4px; background: none !important; border-radius: 4px;"></span>
+                        </h2>
+                      </div>
                       
-                      <!-- Texto principal con estilo mejorado -->
-                      <p style="font-size: 1.1rem; line-height: 1.7; color: #333; font-weight: 400; margin-bottom: 25px; position: relative; z-index: 1; max-width: 100%;">
-                        Buscamos fortalecer tu sistema inmunológico de manera natural y efectiva. Con el Factor de Transferencia, te ofrecemos una herramienta que respalda tus defensas, ayudándote a enfrentar los desafíos diarios con mayor resistencia.
+                      <div class="subtitle-wrapper" style="position: relative; z-index: 2; margin-bottom: 15px; transform-style: preserve-3d;">
+                        <h3 style="font-size: 2.5rem; font-weight: 700; color: #ffcffa; line-height: 1.1; margin: 0; display: inline-block; text-shadow: 0 5px 15px rgba(255,207,250,0.3); background: linear-gradient(135deg, #ffcffa 0%, #d3b2c2 100%); -webkit-background-clip: text; background-clip: text; color: transparent; animation: subtitle-pulse 5s ease-in-out infinite alternate;">
+                          natural
+                        </h3>
+                      </div>
+                      
+                      <div class="title-wrapper" style="position: relative; z-index: 2; margin-bottom: 30px; transform-style: preserve-3d;">
+                        <h2 class="premium-title" style="font-size: 3rem; font-weight: 900; color: #056afa; line-height: 1.1; margin: 0; position: relative; display: inline-block; text-shadow: none !important; transform: translateZ(10px); animation: title-float 4s ease-in-out infinite alternate 1s;">
+                          del sistema inmunológico
+                          <span style="position: absolute; bottom: -5px; right: 0; width: 30%; height: 4px; background: none !important; border-radius: 4px;"></span>
+                        </h2>
+                      </div>
+                      
+                      <!-- Línea decorativa con efecto brillante avanzado -->
+                      <div style="width: 150px; height: 4px; background: transparent !important; margin-bottom: 30px; border-radius: 4px; position: relative; overflow: hidden; box-shadow: none !important;">
+                        <div style="position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: none !important; animation: none !important; z-index: 2;"></div>
+                      </div>
+                      
+                      <!-- Texto principal con estilo premium y efecto hover interactivo -->
+                      <p style="font-size: 1.2rem; line-height: 1.8; color: #333; font-weight: 400; margin: -50px 0 30px 0; position: relative; z-index: 1; text-shadow: none; background: transparent !important; padding: 20px; border-radius: 15px; box-shadow: none; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; transition: all 0.3s ease;" 
+                        onmouseover="this.style.background='transparent'; this.style.transform='translateY(-5px)'; this.style.boxShadow='none'" 
+                        onmouseout="this.style.background='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                        Combinamos <span style="font-weight: 700; color: #056afa; text-shadow: 0 2px 5px rgba(5,106,250,0.2);">ciencia y naturaleza</span> para proporcionarte una solución integral. Nuestro objetivo es que disfrutes de una <span style="font-weight: 700; color: #056afa; text-shadow: 0 2px 5px rgba(5,106,250,0.2);">vida más saludable</span>.
                       </p>
+                    </div>
                       
+                    <div style="width: 100%; display: flex; flex-direction: column; align-items: flex-start;">
                       <!-- Botón de acción premium -->
-                      <a href="productos.html#inmunologico" style="display: inline-block; padding: 14px 30px; background: linear-gradient(135deg, #ffcffa 0%, #d3b2c2 100%); color: #056afa; text-decoration: none; border-radius: 30px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(211,178,194,0.3);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 25px rgba(211,178,194,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(211,178,194,0.3)'">
-                        <i class="fas fa-shield-virus" style="margin-right: 8px;"></i> Descubrir productos
-                      </a>
+                      <div style="margin-top: -40px; position: relative; z-index: 20; overflow: visible;">
+                        <a href="productos.html#inmunologico" class="btn-premium" style="display: inline-block; width: auto; padding: 14px 36px; background: #ffcffa; background-image: none; color: #056afa; text-decoration: none; border-radius: 30px; font-weight: 700; font-size: 1.1rem; letter-spacing: 0.5px; transition: all 0.3s ease; box-shadow: 0 8px 20px rgba(211,178,194,0.4);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 28px rgba(211,178,194,0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 20px rgba(211,178,194,0.4)'">
+                          <i class="fas fa-shield-virus" style="margin-right: 10px;"></i> DESCUBRIR PRODUCTOS
+                        </a>
+                      </div>
+                      
+                      <!-- Puntos decorativos -->
+                      <div style="display: flex; gap: 15px; margin-top: 25px; position: relative; z-index: 1;">
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffcffa; opacity: 0.8;"></div>
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffcffa; opacity: 0.6;"></div>
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffcffa; opacity: 0.4;"></div>
+                      </div>
                     </div>
                     
                     <!-- Puntos decorativos -->
@@ -429,16 +509,16 @@
               </div>
             </div>
             <!-- Slide 4: Compromiso con tu Salud - Diseño Premium -->
-            <div class="carousel-item" style="height: 100%; display: flex; align-items: center; justify-content: center; padding: 0 50px;">
+            <div class="carousel-item" style="height: 100%; display: flex; align-items: center; justify-content: center; padding: 0 50px; background: transparent !important;">
               <div style="display: flex; width: 100%; max-width: 1600px; margin: 0 auto; height: 600px; position: relative; gap: 30px; background: transparent;">
                 <!-- Fondo general del slide con textura sutil -->
                 <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTQ0MCAxNDQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0tMTAgLTEwIGwxNSAxNSBNLTIwIDAgeDE0NDAgTTAgLTIwICAwIDE0NDAiIHN0cm9rZT0icmdiYSg5OCwgMjAwLCAyNDMsIDAuMDUpIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4='); background-size: 30px 30px; opacity: 0.3; z-index: 0;"></div>
                 
                 <!-- Contenedor de la imagen con borde redondeado -->
-                <div style="width: 52%; position: relative; z-index: 2; display: flex; align-items: center; justify-content: center;">
-                  <div style="width: 95%; height: 90%; background: linear-gradient(135deg, #417ecd 0%, #056afa 100%); border-radius: 30px; overflow: hidden; position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.2); transition: all 0.5s ease;" onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 25px 60px rgba(0,0,0,0.25)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 20px 50px rgba(0,0,0,0.2)'">
+                <div style="width: 52%; position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; background: transparent !important;">
+                  <div style="width: 95%; height: 90%; background: none !important; border-radius: 30px; overflow: hidden; position: relative; box-shadow: none !important; transition: all 0.5s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
                     <!-- Textura sutil para el fondo de la imagen -->
-                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjAzIiBkPSJNMzAgMEMxMy40MyAwIDAgMTMuNDMgMCAzMHMxMy40MyAzMCAzMCAzMCAzMC0xMy40MyAzMC0zMFM0Ni41NyAwIDMwIDB6bTAgMWM1Ljc2IDAgMTEuMTEgMS41OCAxNS43IDQuMzNsMTQuOTcgMTQuOTdDNTguNDIgMTguODkgNjAgMjQuMjQgNjAgMzBjMCAxNi41NC0xMy40NiAzMC0zMCAzMFMwIDQ2LjU0IDAgMzAgMTMuNDYgMCAzMCAweiIvPjxwYXRoIGZpbGw9IiNGRkYiIGZpbGwtb3BhY2l0eT0iLjA1IiBkPSJNMzAgMWM1Ljc2IDAgMTEuMTEgMS41OCAxNS43IDQuMzNsMTQuOTcgMTQuOTdDNTguNDIgMTguODkgNjAgMjQuMjQgNjAgMzBjMCAxNi41NC0xMy40NiAzMC0zMCAzMFMwIDQ2LjU0IDAgMzAgMTMuNDYgMCAzMCAweiIvPjwvZz48L3N2Zz4='); background-size: 120px 120px; opacity: 0.3; z-index: 1;"></div>
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: none !important; z-index: 1;"></div>
                     
                     <!-- Elementos decorativos circulares -->
                     <div style="position: absolute; top: 40px; right: 40px; width: 120px; height: 120px; border: 2px solid rgba(255,242,223,0.3); border-radius: 50%; z-index: 1 !important;"></div>
@@ -452,105 +532,185 @@
                   </div>
                 </div>
                 
-                <!-- Contenido informativo con diseño premium y borde redondeado -->
-                <div style="width: 48%; position: relative; z-index: 2; display: flex; align-items: center;">
-                  <div style="width: 95%; height: 90%; padding: 50px; background: white; border-radius: 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); position: relative; overflow: hidden; transition: all 0.5s ease; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 30px 60px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 20px 50px rgba(0,0,0,0.1)'">
+                <!-- Contenido informativo con diseño ULTRA premium y borde redondeado -->
+                <div style="width: 48%; position: relative; z-index: 2; background: transparent !important;">
+                  <!-- Animación de fondo flotante -->
+                  <div class="floating-bg" style="position: absolute; width: 500px; height: 500px; background: none !important; border-radius: 50%; filter: none !important; z-index: -1; animation: none !important;"></div>
+                  
+                  <!-- Contenedor principal con efecto glassmorphism premium transparente -->
+                  <div style="width: 100%; padding: 30px 50px 50px; background: transparent !important; border-radius: 30px; box-shadow: none !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; position: relative; overflow: hidden; transition: none !important; display: flex; flex-direction: column;" 
+                    onmouseover="" 
+                    onmouseout="">
                     
-                    <div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center;">
-                      <!-- Título principal con estilo moderno -->
-                      <h2 style="font-size: 3rem; font-weight: 900; margin-bottom: 15px; color: #056afa; line-height: 1.2; position: relative; z-index: 1;">
-                        Compromiso
-                      </h2>
-                      <h3 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 15px; color: #ffcffa; line-height: 1.2; position: relative; z-index: 1;">
-                        con tu
-                      </h3>
-                      <h2 style="font-size: 3rem; font-weight: 900; margin-bottom: 25px; color: #056afa; line-height: 1.2; position: relative; z-index: 1;">
-                        salud
-                      </h2>
-                      
-                      <!-- Línea decorativa -->
-                      <div style="width: 100px; height: 4px; background: linear-gradient(to right, #ffcffa, #d3b2c2); margin-bottom: 25px; border-radius: 4px;"></div>
-                      
-                      <!-- Texto principal con estilo mejorado -->
-                      <p style="font-size: 1.1rem; line-height: 1.7; color: #333; font-weight: 400; margin-bottom: 25px; position: relative; z-index: 1; max-width: 100%;">
-                        Combinamos ciencia y naturaleza para proporcionarte una solución integral. Nuestro objetivo es que disfrutes de una vida más saludable, con un enfoque preventivo y sostenible que potencie tu bienestar a largo plazo.
-                      </p>
-                      
-                      <!-- Botón de acción premium -->
-                      <a href="nosotros.html" style="display: inline-block; padding: 14px 30px; background: linear-gradient(135deg, #ffcffa 0%, #d3b2c2 100%); color: #056afa; text-decoration: none; border-radius: 30px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(211,178,194,0.3);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 25px rgba(211,178,194,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(211,178,194,0.3)'">
-                        <i class="fas fa-heart" style="margin-right: 8px;"></i> Conoce nuestra historia
-                      </a>
+                    <!-- Elementos decorativos flotantes -->
+                    <div style="position: absolute; bottom: -80px; left: -30px; width: 200px; height: 200px; border-radius: 50%; background: none !important; animation: none !important;"></div>
+                    
+                    <!-- Partículas flotantes -->                    
+                    <div class="particle" style="position: absolute; width: 8px; height: 8px; border-radius: 50%; background: transparent !important; top: 15%; left: 10%; filter: none !important; animation: none !important;"></div>
+                    <div class="particle" style="position: absolute; width: 12px; height: 12px; border-radius: 50%; background: transparent !important; top: 70%; left: 85%; filter: none !important; animation: none !important;"></div>
+                    <div class="particle" style="position: absolute; width: 6px; height: 6px; border-radius: 50%; background: transparent !important; top: 30%; left: 80%; filter: none !important; animation: none !important;"></div>
+                    
+                    <!-- Bordes brillantes animados -->
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; border-radius: 30px; box-shadow: none !important; overflow: hidden;">
+                        <div style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: none !important; animation: none !important;"></div>
                     </div>
                     
-                    <!-- Puntos decorativos -->
-                    <div style="display: flex; gap: 15px; margin-top: 25px; position: relative; z-index: 1;">
-                      <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffcffa; opacity: 0.8;"></div>
-                      <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffcffa; opacity: 0.6;"></div>
-                      <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffcffa; opacity: 0.4;"></div>
+                    <div style="width: 100%; flex-grow: 1; position: relative;">
+                      <!-- Efecto de texto con resplandor -->
+                      <div style="position: absolute; top: -10px; left: -20px; width: 140%; height: 100%; background: none !important; z-index: 0; filter: none !important;"></div>
+                      
+                      <!-- Título con tipografía 3D y animada -->
+                      <div class="title-wrapper" style="position: relative; z-index: 2; margin-bottom: 15px;">
+                        <h2 class="premium-title" style="font-size: 3rem; font-weight: 900; color: #056afa; line-height: 1.1; margin: 0; position: relative; display: inline-block; text-shadow: none !important; transform: none !important; animation: none !important;">
+                          Compromiso
+                          <span style="position: absolute; bottom: -5px; left: 0; width: 30%; height: 4px; background: none !important; border-radius: 4px;"></span>
+                        </h2>
+                      </div>
+                      
+                      <div class="subtitle-wrapper" style="position: relative; z-index: 2; margin-bottom: 15px; transform-style: preserve-3d;">
+                        <h3 style="font-size: 2.5rem; font-weight: 700; color: #ffcffa; line-height: 1.1; margin: 0; display: inline-block; text-shadow: 0 5px 15px rgba(255,207,250,0.3); background: linear-gradient(135deg, #ffcffa 0%, #d3b2c2 100%); -webkit-background-clip: text; background-clip: text; color: transparent; animation: subtitle-pulse 5s ease-in-out infinite alternate;">
+                          con tu
+                        </h3>
+                      </div>
+                      
+                      <div class="title-wrapper" style="position: relative; z-index: 2; margin-bottom: 30px; transform-style: preserve-3d;">
+                        <h2 class="premium-title" style="font-size: 3rem; font-weight: 900; color: #056afa; line-height: 1.1; margin: 0; position: relative; display: inline-block; text-shadow: none !important; transform: translateZ(10px); animation: title-float 4s ease-in-out infinite alternate 1s;">
+                          salud
+                          <span style="position: absolute; bottom: -5px; right: 0; width: 30%; height: 4px; background: none !important; border-radius: 4px;"></span>
+                        </h2>
+                      </div>
+                      
+                      <!-- Línea decorativa con efecto brillante avanzado -->
+                      <div style="width: 150px; height: 4px; background: transparent !important; margin-bottom: 30px; border-radius: 4px; position: relative; overflow: hidden; box-shadow: none !important;">
+                        <div style="position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: none !important; animation: none !important; z-index: 2;"></div>
+                      </div>
+                      
+                      <!-- Texto principal con estilo premium y efecto hover interactivo -->
+                      <p style="font-size: 1.2rem; line-height: 1.8; color: #333; font-weight: 400; margin: 0 0 30px 0; position: relative; z-index: 1; text-shadow: none; background: transparent !important; padding: 20px; border-radius: 15px; box-shadow: none; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; transition: all 0.3s ease;" 
+                        onmouseover="this.style.background='transparent'; this.style.transform='translateY(-5px)'; this.style.boxShadow='none'" 
+                        onmouseout="this.style.background='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                        Combinamos <span style="font-weight: 700; color: #056afa; text-shadow: 0 2px 5px rgba(5,106,250,0.2);">ciencia y naturaleza</span> para proporcionarte una solución integral. Nuestro objetivo es que disfrutes de una <span style="font-weight: 700; color: #056afa; text-shadow: 0 2px 5px rgba(5,106,250,0.2);">vida más saludable</span>.
+                      </p>
+                    </div>
+                      
+                    <div style="width: 100%; display: flex; flex-direction: column; align-items: flex-start;">
+                      <!-- Botón de acción premium -->
+                      <div style="margin-top: -40px; position: relative; z-index: 20; overflow: visible;">
+                        <a href="nosotros.html" class="btn-premium" style="display: inline-block; width: auto; padding: 14px 36px; background: #ffcffa; background-image: none; color: #056afa; text-decoration: none; border-radius: 30px; font-weight: 700; font-size: 1.1rem; letter-spacing: 0.5px; transition: all 0.3s ease; box-shadow: 0 8px 20px rgba(211,178,194,0.4);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 28px rgba(211,178,194,0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 20px rgba(211,178,194,0.4)'">
+                          <i class="fas fa-heart" style="margin-right: 10px;"></i> Conoce nuestra historia
+                        </a>
+                      </div>
+                    
+                      <!-- Puntos decorativos -->
+                      <div style="display: flex; gap: 15px; margin-top: 25px; position: relative; z-index: 1;">
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffcffa; opacity: 0.8;"></div>
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffcffa; opacity: 0.6;"></div>
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffcffa; opacity: 0.4;"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <!-- Slide 5: Calidad y excelencia garantizada - Diseño Premium -->
-            <div class="carousel-item" style="height: 100%; display: flex; align-items: center; justify-content: center; padding: 0 50px;">
+            <div class="carousel-item" style="height: 100%; display: flex; align-items: center; justify-content: center; padding: 0 50px; background: transparent !important;">
               <div style="display: flex; width: 100%; max-width: 1600px; margin: 0 auto; height: 600px; position: relative; gap: 30px; background: transparent;">
                 <!-- Fondo general del slide con textura sutil -->
                 <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTQ0MCAxNDQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0tMTAgLTEwIGwxNSAxNSBNLTIwIDAgeDE0NDAgTTAgLTIwICAwIDE0NDAiIHN0cm9rZT0icmdiYSg5OCwgMjAwLCAyNDMsIDAuMDUpIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4='); background-size: 30px 30px; opacity: 0.3; z-index: 0;"></div>
                 
                 <!-- Contenedor de la imagen con borde redondeado -->
-                <div style="width: 52%; position: relative; z-index: 2; display: flex; align-items: center; justify-content: center;">
-                  <div style="width: 95%; height: 90%; background: linear-gradient(135deg, #056afa 0%, #417ecd 100%); border-radius: 30px; overflow: hidden; position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.2); transition: all 0.5s ease;" onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 25px 60px rgba(0,0,0,0.25)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 20px 50px rgba(0,0,0,0.2)'">
+                <div style="width: 52%; position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; background: transparent !important;">
+                  <div style="width: 95%; height: 90%; background: transparent !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; border-radius: 30px; overflow: hidden; position: relative; box-shadow: none; transition: all 0.5s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
                     <!-- Textura sutil para el fondo de la imagen -->
-                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjAzIiBkPSJNMzAgMEMxMy40MyAwIDAgMTMuNDMgMCAzMHMxMy40MyAzMCAzMCAzMCAzMC0xMy40MyAzMC0zMFM0Ni41NyAwIDMwIDB6bTAgMWM1Ljc2IDAgMTEuMTEgMS41OCAxNS43IDQuMzNsMTQuOTcgMTQuOTdDNTguNDIgMTguODkgNjAgMjQuMjQgNjAgMzBjMCAxNi41NC0xMy40NiAzMC0zMCAzMFMwIDQ2LjU0IDAgMzAgMTMuNDYgMCAzMCAweiIvPjxwYXRoIGZpbGw9IiNGRkYiIGZpbGwtb3BhY2l0eT0iLjA1IiBkPSJNMzAgMWM1Ljc2IDAgMTEuMTEgMS41OCAxNS43IDQuMzNsMTQuOTcgMTQuOTdDNTguNDIgMTguODkgNjAgMjQuMjQgNjAgMzBjMCAxNi41NC0xMy40NiAzMC0zMCAzMFMwIDQ2LjU0IDAgMzAgMTMuNDYgMCAzMCAweiIvPjwvZz48L3N2Zz4='); background-size: 120px 120px; opacity: 0.3; z-index: 1;"></div>
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: none !important; z-index: 1;"></div>
                     
                     <!-- Imagen del producto con efectos premium -->
                     <img src="recursos/carrusel/CelestinFT__2024_V3.webp" alt="Calidad y excelencia garantizada" style="object-fit: cover; width: 100%; height: 100%; transition: transform 0.8s ease; filter: drop-shadow(0 10px 25px rgba(0,0,0,0.15)); z-index: 999 !important; position: relative;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'" class="carousel-product-image">
                     
                     <!-- Resplandor decorativo -->
-                    <div style="position: absolute; bottom: -50px; left: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%); z-index: 1;"></div>
+                    <div style="position: absolute; bottom: -50px; left: -50px; width: 200px; height: 200px; background: none !important; z-index: 1;"></div>
                     
                     <!-- Elementos decorativos circulares -->
-                    <div style="position: absolute; top: 40px; right: 40px; width: 120px; height: 120px; border: 2px solid rgba(255,255,255,0.3); border-radius: 50%; z-index: 1 !important;"></div>
-                    <div style="position: absolute; top: 60px; right: 60px; width: 80px; height: 80px; border: 2px solid rgba(255,255,255,0.2); border-radius: 50%; z-index: 1 !important;"></div>
+                    <div style="position: absolute; top: 40px; left: -50px; width: 120px; height: 120px; border: none !important; border-radius: 50%; z-index: 1 !important;"></div>
+                    <div style="position: absolute; top: 60px; left: -60px; width: 80px; height: 80px; border: none !important; border-radius: 50%; z-index: 1 !important;"></div>
                   </div>
                 </div>
                 
-                <!-- Contenido informativo con diseño premium y borde redondeado -->
-                <div style="width: 48%; position: relative; z-index: 2; display: flex; align-items: center;">
-                  <div style="width: 95%; height: 90%; padding: 50px; background: white; border-radius: 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); position: relative; overflow: hidden; transition: all 0.5s ease; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 30px 60px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 20px 50px rgba(0,0,0,0.1)'">
+                <!-- Contenido informativo con diseño ULTRA premium y borde redondeado -->
+                <div style="width: 48%; position: relative; z-index: 2; background: transparent !important;">
+                  <!-- Animación de fondo flotante -->
+                  <div class="floating-bg" style="position: absolute; width: 500px; height: 500px; background: none !important; border-radius: 50%; filter: none !important; z-index: -1; animation: none !important;"></div>
+                  
+                  <!-- Contenedor principal con efecto glassmorphism premium transparente -->
+                  <div style="width: 100%; padding: 30px 50px 50px; background: transparent !important; border-radius: 30px; box-shadow: none !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; position: relative; overflow: hidden; transition: none !important; display: flex; flex-direction: column;" 
+                    onmouseover="" 
+                    onmouseout="">
                     
-                    <div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center;">
-                      <!-- Título principal con estilo moderno -->
-                      <h2 style="font-size: 3rem; font-weight: 900; margin-bottom: 15px; color: #056afa; line-height: 1.2; position: relative; z-index: 1;">
-                        Calidad
-                      </h2>
-                      <h3 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 15px; color: #ffcffa; line-height: 1.2; position: relative; z-index: 1;">
-                        y excelencia
-                      </h3>
-                      <h2 style="font-size: 3rem; font-weight: 900; margin-bottom: 25px; color: #056afa; line-height: 1.2; position: relative; z-index: 1;">
-                        garantizada
-                      </h2>
-                      
-                      <!-- Línea decorativa -->
-                      <div style="width: 100px; height: 4px; background: linear-gradient(to right, #ffcffa, #d3b2c2); margin-bottom: 25px; border-radius: 4px;"></div>
-                      
-                      <!-- Texto principal con estilo mejorado -->
-                      <p style="font-size: 1.1rem; line-height: 1.7; color: #333; font-weight: 400; margin-bottom: 25px; position: relative; z-index: 1; max-width: 100%;">
-                        Cada producto que ofrecemos cumple con los más altos estándares de calidad. Nuestro compromiso es brindarte soluciones confiables y efectivas, respaldadas por investigación y elaboradas bajo estrictos controles de calidad.
-                      </p>
-                      
-                      <!-- Botón de acción premium -->
-                      <a href="productos.html" style="display: inline-block; padding: 14px 30px; background: linear-gradient(135deg, #ffcffa 0%, #d3b2c2 100%); color: #056afa; text-decoration: none; border-radius: 30px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(211,178,194,0.3);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 25px rgba(211,178,194,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(211,178,194,0.3)'">
-                        <i class="fas fa-certificate" style="margin-right: 8px;"></i> Ver certificaciones
-                      </a>
+                    <!-- Elementos decorativos flotantes -->
+                    <div style="position: absolute; bottom: -80px; left: -30px; width: 200px; height: 200px; border-radius: 50%; background: none !important; animation: none !important;"></div>
+                    
+                    <!-- Partículas flotantes -->                    
+                    <div class="particle" style="position: absolute; width: 8px; height: 8px; border-radius: 50%; background: transparent !important; top: 15%; left: 10%; filter: none !important; animation: none !important;"></div>
+                    <div class="particle" style="position: absolute; width: 12px; height: 12px; border-radius: 50%; background: transparent !important; top: 70%; left: 85%; filter: none !important; animation: none !important;"></div>
+                    <div class="particle" style="position: absolute; width: 6px; height: 6px; border-radius: 50%; background: transparent !important; top: 30%; left: 80%; filter: none !important; animation: none !important;"></div>
+                    
+                    <!-- Bordes brillantes animados -->
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; border-radius: 30px; box-shadow: none !important; overflow: hidden;">
+                        <div style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: none !important; animation: none !important;"></div>
                     </div>
                     
-                    <!-- Puntos decorativos -->
-                    <div style="display: flex; gap: 15px; margin-top: 25px; position: relative; z-index: 1;">
-                      <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffcffa; opacity: 0.8;"></div>
-                      <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffcffa; opacity: 0.6;"></div>
-                      <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffcffa; opacity: 0.4;"></div>
+                    <div style="width: 100%; flex-grow: 1; position: relative;">
+                      <!-- Efecto de texto con resplandor -->
+                      <div style="position: absolute; top: -10px; left: -20px; width: 140%; height: 100%; background: none !important; z-index: 0; filter: none !important;"></div>
+                      
+                      <!-- Título con tipografía 3D y animada -->
+                      <div class="title-wrapper" style="position: relative; z-index: 2; margin-bottom: 15px;">
+                        <h2 class="premium-title" style="font-size: 3rem; font-weight: 900; color: #056afa; line-height: 1.1; margin: 0; position: relative; display: inline-block; text-shadow: none !important; transform: none !important; animation: none !important;">
+                          Calidad
+                          <span style="position: absolute; bottom: -5px; left: 0; width: 30%; height: 4px; background: none !important; border-radius: 4px;"></span>
+                        </h2>
+                      </div>
+                      
+                      <div class="subtitle-wrapper" style="position: relative; z-index: 2; margin-bottom: 15px; transform-style: preserve-3d;">
+                        <h3 style="font-size: 2.5rem; font-weight: 700; color: #ffcffa; line-height: 1.1; margin: 0; display: inline-block; text-shadow: 0 5px 15px rgba(255,207,250,0.3); background: linear-gradient(135deg, #ffcffa 0%, #d3b2c2 100%); -webkit-background-clip: text; background-clip: text; color: transparent; animation: subtitle-pulse 5s ease-in-out infinite alternate;">
+                          y excelencia
+                        </h3>
+                      </div>
+                      
+                      <div class="title-wrapper" style="position: relative; z-index: 2; margin-bottom: 30px; transform-style: preserve-3d;">
+                        <h2 class="premium-title" style="font-size: 3rem; font-weight: 900; color: #056afa; line-height: 1.1; margin: 0; position: relative; display: inline-block; text-shadow: none !important; transform: translateZ(10px); animation: title-float 4s ease-in-out infinite alternate 1s;">
+                          garantizada
+                          <span style="position: absolute; bottom: -5px; right: 0; width: 30%; height: 4px; background: none !important; border-radius: 4px;"></span>
+                        </h2>
+                      </div>
+                      
+                      <!-- Línea decorativa con efecto brillante avanzado -->
+                      <div style="width: 150px; height: 4px; background: transparent !important; margin-bottom: 30px; border-radius: 4px; position: relative; overflow: hidden; box-shadow: none !important;">
+                        <div style="position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: none !important; animation: none !important; z-index: 2;"></div>
+                      </div>
+                      
+                      <!-- Texto principal con estilo premium y efecto hover interactivo -->
+                      <p style="font-size: 1.2rem; line-height: 1.8; color: #333; font-weight: 400; margin: 0 0 30px 0; position: relative; z-index: 1; text-shadow: none; background: transparent !important; padding: 20px; border-radius: 15px; box-shadow: none; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; transition: all 0.3s ease;" 
+                        onmouseover="this.style.background='transparent'; this.style.transform='translateY(-5px)'; this.style.boxShadow='none'" 
+                        onmouseout="this.style.background='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                        Cada producto que ofrecemos cumple con los <span style="font-weight: 700; color: #056afa; text-shadow: 0 2px 5px rgba(5,106,250,0.2);">más altos estándares de calidad</span>. Nuestro compromiso es brindarte <span style="font-weight: 700; color: #056afa; text-shadow: 0 2px 5px rgba(5,106,250,0.2);">soluciones confiables y efectivas</span>.
+                      </p>
+                    </div>
+                      
+                    <div style="width: 100%; display: flex; flex-direction: column; align-items: flex-start;">
+                      <!-- Botón de acción premium -->
+                      <div style="margin-top: -40px; position: relative; z-index: 20; overflow: visible;">
+                        <a href="productos.html" class="btn-premium" style="display: inline-block; width: auto; padding: 14px 36px; background: #ffcffa; background-image: none; color: #056afa; text-decoration: none; border-radius: 30px; font-weight: 700; font-size: 1.1rem; letter-spacing: 0.5px; transition: all 0.3s ease; box-shadow: 0 8px 20px rgba(211,178,194,0.4);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 28px rgba(211,178,194,0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 20px rgba(211,178,194,0.4)'">
+                          <i class="fas fa-certificate" style="margin-right: 10px;"></i> Ver certificaciones
+                        </a>
+                      </div>
+                    
+                      <!-- Puntos decorativos -->
+                      <div style="display: flex; gap: 15px; margin-top: 25px; position: relative; z-index: 1;">
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffcffa; opacity: 0.8;"></div>
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffcffa; opacity: 0.6;"></div>
+                        <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffcffa; opacity: 0.4;"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -558,23 +718,16 @@
             </div>
           </div>
           <!-- Controles del carrusel con diseño ultra premium -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselMain" data-bs-slide="prev" style="width: 60px; height: 60px; background: rgba(5, 106, 250, 0.2); border-radius: 50%; top: 50%; transform: translateY(-50%); left: 30px; opacity: 0.7; transition: all 0.3s ease; backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselMain" data-bs-slide="prev" style="width: 60px; height: 60px; background: transparent !important; border-radius: 50%; top: 50%; transform: translateY(-50%); left: 30px; opacity: 0.7; transition: all 0.3s ease; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; border: none; box-shadow: none;">
             <span class="carousel-control-prev-icon" aria-hidden="true" style="width: 30px; height: 30px;"></span>
             <span class="visually-hidden">Anterior</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselMain" data-bs-slide="next" style="width: 60px; height: 60px; background: rgba(5, 106, 250, 0.2); border-radius: 50%; top: 50%; transform: translateY(-50%); right: 30px; opacity: 0.7; transition: all 0.3s ease; backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselMain" data-bs-slide="next" style="width: 60px; height: 60px; background: transparent !important; border-radius: 50%; top: 50%; transform: translateY(-50%); right: 30px; opacity: 0.7; transition: all 0.3s ease; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; border: none; box-shadow: none;">
             <span class="carousel-control-next-icon" aria-hidden="true" style="width: 30px; height: 30px;"></span>
             <span class="visually-hidden">Siguiente</span>
           </button>
           
-          <!-- Indicadores del carrusel con diseño premium y animaciones -->
-          <div class="carousel-indicators" style="bottom: 30px; margin-bottom: 0; gap: 10px; display: flex; justify-content: center;">
-            <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="width: 12px; height: 12px; border-radius: 50%; margin: 0; border: 2px solid rgba(255,255,255,0.7); background: rgba(5, 106, 250, 0.5); box-shadow: 0 0 10px rgba(5, 106, 250, 0.3); transition: all 0.3s ease;"></button>
-            <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="1" aria-label="Slide 2" style="width: 12px; height: 12px; border-radius: 50%; margin: 0; border: 2px solid rgba(255,255,255,0.7); background: rgba(5, 106, 250, 0.2); box-shadow: 0 0 5px rgba(5, 106, 250, 0.2); transition: all 0.3s ease;"></button>
-            <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="2" aria-label="Slide 3" style="width: 12px; height: 12px; border-radius: 50%; margin: 0; border: 2px solid rgba(255,255,255,0.7); background: rgba(5, 106, 250, 0.2); box-shadow: 0 0 5px rgba(5, 106, 250, 0.2); transition: all 0.3s ease;"></button>
-            <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="3" aria-label="Slide 4" style="width: 12px; height: 12px; border-radius: 50%; margin: 0; border: 2px solid rgba(255,255,255,0.7); background: rgba(5, 106, 250, 0.2); box-shadow: 0 0 5px rgba(5, 106, 250, 0.2); transition: all 0.3s ease;"></button>
-            <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="4" aria-label="Slide 5" style="width: 12px; height: 12px; border-radius: 50%; margin: 0; border: 2px solid rgba(255,255,255,0.7); background: rgba(5, 106, 250, 0.2); box-shadow: 0 0 5px rgba(5, 106, 250, 0.2); transition: all 0.3s ease;"></button>
-          </div>
+          <!-- Indicadores del carrusel eliminados -->
           
           <!-- Script para mejorar interactividad en hover de los controles -->
           <script>
@@ -598,40 +751,10 @@
               addHoverEffect(prevButton);
               addHoverEffect(nextButton);
               
-              // Indicator buttons hover effects
-              const indicators = document.querySelectorAll('.carousel-indicators button');
+              // Código de los indicadores eliminado
               
-              indicators.forEach(button => {
-                button.addEventListener('mouseenter', function() {
-                  if (!this.classList.contains('active')) {
-                    this.style.transform = 'scale(1.2)';
-                    this.style.background = 'rgba(255,255,255,0.5)';
-                  }
-                });
-                
-                button.addEventListener('mouseleave', function() {
-                  if (!this.classList.contains('active')) {
-                    this.style.transform = 'scale(1)';
-                    this.style.background = 'rgba(255,255,255,0.3)';
-                  }
-                });
-              });
-              
-              // Update indicator state on slide change
+              // El código para actualizar los indicadores ha sido eliminado
               const carousel = document.getElementById('carouselMain');
-              carousel.addEventListener('slide.bs.carousel', function(event) {
-                const activeIndex = event.to;
-                
-                indicators.forEach((indicator, index) => {
-                  if (index === activeIndex) {
-                    indicator.style.background = '#62c8f3';
-                    indicator.style.boxShadow = '0 0 10px rgba(98, 200, 243, 0.5)';
-                  } else {
-                    indicator.style.background = 'rgba(255,255,255,0.3)';
-                    indicator.style.boxShadow = '0 0 5px rgba(255,255,255,0.2)';
-                  }
-                });
-              });
             });
           </script>
         </div>
@@ -641,9 +764,9 @@
   </section>
 
   <!-- Enlaces a aplicaciones móviles -->
-  <section class="app-section" style="background-color: #f7f9fc; padding: 40px 0;">
+  <section class="app-section" style="background-color: transparent; padding: 40px 0;">
     <div class="container">
-      <div class="app-content" style="text-align: center; position: relative; padding: 60px 20px; background: linear-gradient(to bottom right, rgba(5, 106, 250, 0.03), rgba(255, 207, 250, 0.05)); border-radius: 30px; overflow: hidden; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.03);">
+      <div class="app-content" style="text-align: center; position: relative; padding: 60px 20px; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); border-radius: 30px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);">
         <!-- Elementos decorativos de fondo -->
         <div style="position: absolute; top: -50px; left: -50px; width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle, rgba(98, 200, 243, 0.1) 0%, rgba(98, 200, 243, 0) 70%);"></div>
         <div style="position: absolute; bottom: -70px; right: -70px; width: 250px; height: 250px; border-radius: 50%; background: radial-gradient(circle, rgba(255, 207, 250, 0.15) 0%, rgba(255, 207, 250, 0) 70%);"></div>
@@ -725,7 +848,7 @@
   </section>
 
   <!-- Sección de Beneficios Premium con nueva paleta de colores -->
-  <section id="beneficios" class="beneficios-section" style="padding: 100px 0; position: relative; background: linear-gradient(to bottom, #f9f9f9, white); overflow: hidden;">
+  <section id="beneficios" class="beneficios-section" style="padding: 100px 0; position: relative; background: transparent; overflow: hidden;">
     <!-- Elementos decorativos de fondo -->
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTQ0MCAxNDQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0tMTAgLTEwIGwxNSAxNSBNLTIwIDAgeDE0NDAgTTAgLTIwICAwIDE0NDAiIHN0cm9rZT0icmdiYSg1LCAxMDYsIDI1MCwgMC4wMykiIHN0cm9rZS13aWR0aD0iMSIvPjwvc3ZnPg=='); background-size: 30px 30px; opacity: 0.4; z-index: 0;"></div>
     
@@ -957,7 +1080,7 @@
           </h4>
           <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 15px;">
             <li style="margin-bottom: 0;"><a href="index.html" style="color: white; text-decoration: none; font-size: 1.05rem; display: flex; align-items: center; transition: all 0.3s ease;" onmouseover="this.style.color='#fff2df'; this.style.paddingLeft='8px'" onmouseout="this.style.color='white'; this.style.paddingLeft='0px'"><i class="fas fa-chevron-right" style="font-size: 0.7rem; margin-right: 10px; color: #fff2df;"></i> Inicio</a></li>
-            <li style="margin-bottom: 0;"><a href="index.html#productos" style="color: white; text-decoration: none; font-size: 1.05rem; display: flex; align-items: center; transition: all 0.3s ease;" onmouseover="this.style.color='#fff2df'; this.style.paddingLeft='8px'" onmouseout="this.style.color='white'; this.style.paddingLeft='0px'"><i class="fas fa-chevron-right" style="font-size: 0.7rem; margin-right: 10px; color: #fff2df;"></i> Productos</a></li>
+            <li style="margin-bottom: 0;"><a href="productos.html" style="color: white; text-decoration: none; font-size: 1.05rem; display: flex; align-items: center; transition: all 0.3s ease;" onmouseover="this.style.color='#fff2df'; this.style.paddingLeft='8px'" onmouseout="this.style.color='white'; this.style.paddingLeft='0px'"><i class="fas fa-chevron-right" style="font-size: 0.7rem; margin-right: 10px; color: #fff2df;"></i> Productos</a></li>
             <li style="margin-bottom: 0;"><a href="nosotros.html" style="color: white; text-decoration: none; font-size: 1.05rem; display: flex; align-items: center; transition: all 0.3s ease;" onmouseover="this.style.color='#fff2df'; this.style.paddingLeft='8px'" onmouseout="this.style.color='white'; this.style.paddingLeft='0px'"><i class="fas fa-chevron-right" style="font-size: 0.7rem; margin-right: 10px; color: #fff2df;"></i> Nosotros</a></li>
             <li style="margin-bottom: 0;"><a href="contacto.html" style="color: white; text-decoration: none; font-size: 1.05rem; display: flex; align-items: center; transition: all 0.3s ease;" onmouseover="this.style.color='#fff2df'; this.style.paddingLeft='8px'" onmouseout="this.style.color='white'; this.style.paddingLeft='0px'"><i class="fas fa-chevron-right" style="font-size: 0.7rem; margin-right: 10px; color: #fff2df;"></i> Contacto</a></li>
             <li style="margin-bottom: 0;"><a href="carrito.html" style="color: white; text-decoration: none; font-size: 1.05rem; display: flex; align-items: center; transition: all 0.3s ease;" onmouseover="this.style.color='#fff2df'; this.style.paddingLeft='8px'" onmouseout="this.style.color='white'; this.style.paddingLeft='0px'"><i class="fas fa-chevron-right" style="font-size: 0.7rem; margin-right: 10px; color: #fff2df;"></i> Carrito</a></li>
